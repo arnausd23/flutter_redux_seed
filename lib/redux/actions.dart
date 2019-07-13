@@ -1,4 +1,8 @@
 import 'package:flutter_redux_seed/model/item.dart';
+<<<<<<< HEAD
+=======
+import 'package:flutter_redux_seed/model/app_state.dart';
+>>>>>>> 7b478ea6e0b430365e1f48e48dbf103216a2502c
 
 class AddItemAction {
   static int _id = 0;
