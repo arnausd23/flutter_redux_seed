@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_redux_seed/UI/view_model.dart';
+import 'package:flutter_redux_seed/UI/view_models/item_list_vm.dart';
 import 'package:flutter_redux_seed/model/item.dart';
 
 const kDeleteAllButton = 'Delete all items';
@@ -8,7 +8,7 @@ const kAddItemPlaceholder = 'add an item';
 
 /// Widget with an input and submission
 class AddItemWidget extends StatefulWidget {
-  final ViewModel model;
+  final ItemListViewModel model;
 
   AddItemWidget(this.model);
 
@@ -34,7 +34,7 @@ class _AddItemWidgetState extends State<AddItemWidget> {
 
 /// Row for item in items
 class ItemListWidget extends StatelessWidget {
-  final ViewModel model;
+  final ItemListViewModel model;
 
   ItemListWidget(this.model);
 
@@ -59,7 +59,7 @@ class ItemListWidget extends StatelessWidget {
 
 /// Widget with a remove all button
 class RemoveItemsButton extends StatelessWidget {
-  final ViewModel model;
+  final ItemListViewModel model;
 
   RemoveItemsButton(this.model);
 

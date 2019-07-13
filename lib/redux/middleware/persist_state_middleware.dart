@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_redux_seed/model/app_state.dart';
-import 'package:flutter_redux_seed/redux/actions.dart';
+import 'package:flutter_redux_seed/redux/actions/item_actions.dart';
 import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -39,7 +39,7 @@ Future<AppState> loadFromPrefs() async {
   return AppState.initialState();
 }
 
-List<Middleware<AppState>> appStateMiddleware([AppState state = const AppState(items: [])]) {
+List<Middleware<AppState>> persistStateMiddleware([AppState state = const AppState(items: [])]) {
   final loadItems = _loadFromPrefs();
   final saveItems = _saveToPrefs(state);
 

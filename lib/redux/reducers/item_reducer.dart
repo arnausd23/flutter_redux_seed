@@ -1,11 +1,6 @@
 import 'package:flutter_redux_seed/model/item.dart';
-import 'package:flutter_redux_seed/model/app_state.dart';
-import 'package:flutter_redux_seed/redux/actions.dart';
+import 'package:flutter_redux_seed/redux/actions/item_actions.dart';
 import 'package:redux/redux.dart';
-
-AppState appStateReducer(AppState state, action) {
-  return AppState(items: itemReducer(state.items, action));
-}
 
 Reducer<List<Item>> itemReducer = combineReducers<List<Item>>([
   TypedReducer<List<Item>, AddItemAction>(addItemReducer),
