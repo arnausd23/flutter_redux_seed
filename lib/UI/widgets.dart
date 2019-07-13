@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_redux_seed/UI/view_model.dart';
-import 'package:flutter_redux_seed/model/model.dart';
+import 'package:flutter_redux_seed/model/item.dart';
+import 'package:flutter_redux_seed/model/app_state.dart';
 
+const kDeleteAllButton = 'Delete all items';
+const kAddItemPlaceholder = 'add an item';
+
+/// Widget with an input and submission
 class AddItemWidget extends StatefulWidget {
   final ViewModel model;
 
@@ -19,7 +24,7 @@ class _AddItemWidgetState extends State<AddItemWidget> {
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
-      decoration: InputDecoration(hintText: 'add an item'),
+      decoration: InputDecoration(hintText: kAddItemPlaceholder),
       onSubmitted: (String s) {
         widget.model.onAddItem(s);
         controller.text = '';
@@ -28,6 +33,7 @@ class _AddItemWidgetState extends State<AddItemWidget> {
   }
 }
 
+/// Row for item in items
 class ItemListWidget extends StatelessWidget {
   final ViewModel model;
 
@@ -42,11 +48,17 @@ class ItemListWidget extends StatelessWidget {
                 leading: IconButton(
                   icon: Icon(Icons.delete),
                   onPressed: () => model.onRemoveItem(item),
-                )))
+                ),
+                trailing: Checkbox(
+                    value: item.completed,
+                    onChanged: (b) {
+                      model.onCompleted(item);
+                    })))
             .toList());
   }
 }
 
+/// Widget with a remove all button
 class RemoveItemsButton extends StatelessWidget {
   final ViewModel model;
 
@@ -54,6 +66,6 @@ class RemoveItemsButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(child: Text('Delete all items'), onPressed: () => model.onRemoveItems());
+    return RaisedButton(child: Text(kDeleteAllButton), onPressed: () => model.onRemoveItems());
   }
 }

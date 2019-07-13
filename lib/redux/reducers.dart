@@ -1,24 +1,38 @@
-import 'package:flutter_redux_seed/model/model.dart';
+import 'package:flutter_redux_seed/model/item.dart';
+import 'package:flutter_redux_seed/model/app_state.dart';
 import 'package:flutter_redux_seed/redux/actions.dart';
+import 'package:redux/redux.dart';
 
 AppState appStateReducer(AppState state, action) {
   return AppState(items: itemReducer(state.items, action));
 }
 
-List<Item> itemReducer(List<Item> state, action) {
-  // In order to modify lists using immutability
-  // you can pipe to an empty list this way
-  if (action is AddItemAction)
-    return List.unmodifiable([]
-      ..addAll(state)
-      ..add(Item(id: action.id, body: action.item)));
+Reducer<List<Item>> itemReducer = combineReducers<List<Item>>([
+  TypedReducer<List<Item>, AddItemAction>(addItemReducer),
+  TypedReducer<List<Item>, RemoveItemAction>(removeItemReducer),
+  TypedReducer<List<Item>, RemoveItemsAction>(removeItemsReducer),
+  TypedReducer<List<Item>, LoadedItemsAction>(loadedItemsReducer),
+  TypedReducer<List<Item>, ItemCompletedAction>(itemCompletedReducer),
+]);
 
-  // or this way
-  if (action is RemoveItemAction) return List.unmodifiable(List.from(state)..remove(action.item));
+List<Item> addItemReducer(List<Item> items, AddItemAction action) {
+  return List.unmodifiable([]
+    ..addAll(items)
+    ..add(Item(id: action.id, body: action.item)));
+}
 
-  if (action is RemoveItemsAction) return List.unmodifiable([]);
+List<Item> removeItemReducer(List<Item> items, RemoveItemAction action) {
+  return List.unmodifiable(List.from(items)..remove(action.item));
+}
 
-  if (action is LoadedItemsAction) return action.items;
+List<Item> removeItemsReducer(List<Item> items, RemoveItemsAction action) {
+  return List.unmodifiable([]);
+}
 
-  return state;
+List<Item> loadedItemsReducer(List<Item> items, LoadedItemsAction action) {
+  return action.items;
+}
+
+List<Item> itemCompletedReducer(List<Item> items, ItemCompletedAction action) {
+  return items.map((item) => item.id == action.item.id ? item.copyWith(completed: !item.completed) : item).toList();
 }
