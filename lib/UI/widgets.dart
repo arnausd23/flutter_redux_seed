@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_redux_seed/UI/view_model.dart';
 import 'package:flutter_redux_seed/model/item.dart';
-<<<<<<< HEAD
-=======
-import 'package:flutter_redux_seed/model/app_state.dart';
->>>>>>> 7b478ea6e0b430365e1f48e48dbf103216a2502c
 
 const kDeleteAllButton = 'Delete all items';
 const kAddItemPlaceholder = 'add an item';
