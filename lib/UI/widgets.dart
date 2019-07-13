@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_redux_seed/UI/pages.dart';
+import 'package:flutter_redux_seed/UI/view_model.dart';
 import 'package:flutter_redux_seed/model/model.dart';
 
 class AddItemWidget extends StatefulWidget {
