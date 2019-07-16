@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_redux_seed/domain/item.dart';
+import 'package:flutter_redux_seed/models/item.dart';
 
 class AppState {
   final List<Item> items;

@@ -1,5 +1,5 @@
 import 'package:flutter_redux_seed/infrastructure/repositories/sp_repository.dart';
-import 'package:flutter_redux_seed/domain/app_state.dart';
+import 'package:flutter_redux_seed/models/app_state.dart';
 import 'package:flutter_redux_seed/redux/actions/item_actions.dart';
 import 'package:redux/redux.dart';
 

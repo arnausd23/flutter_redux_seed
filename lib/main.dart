@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_redux_seed/UI/screens/pages.dart';
-import 'package:flutter_redux_seed/domain/app_state.dart';
+import 'package:flutter_redux_seed/models/app_state.dart';
 import 'package:flutter_redux_seed/redux/actions/item_actions.dart';
 import 'package:flutter_redux_seed/redux/middleware/persist_state_middleware.dart';
 import 'package:flutter_redux_seed/redux/reducers/index.dart';

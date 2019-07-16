@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:flutter_redux_seed/domain/app_state.dart';
-import 'package:flutter_redux_seed/domain/local_repository.dart';
+import 'package:flutter_redux_seed/models/app_state.dart';
+import 'package:flutter_redux_seed/models/local_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const kItemsKey = 'itemsState';

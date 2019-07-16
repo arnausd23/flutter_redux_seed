@@ -1,4 +1,4 @@
-import 'package:flutter_redux_seed/domain/item.dart';
+import 'package:flutter_redux_seed/models/item.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

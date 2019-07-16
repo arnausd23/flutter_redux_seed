@@ -1,4 +1,4 @@
-import 'package:flutter_redux_seed/domain/item.dart';
+import 'package:flutter_redux_seed/models/item.dart';
 import 'package:flutter_redux_seed/redux/actions/item_actions.dart';
 import 'package:redux/redux.dart';
 

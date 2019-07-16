@@ -1,5 +1,5 @@
-import 'package:flutter_redux_seed/domain/item.dart';
-import 'package:flutter_redux_seed/domain/app_state.dart';
+import 'package:flutter_redux_seed/models/item.dart';
+import 'package:flutter_redux_seed/models/app_state.dart';
 import 'package:flutter_redux_seed/redux/actions/item_actions.dart';
 import 'package:flutter_redux_seed/redux/selectors/item_selectors.dart';
 import 'package:redux/redux.dart';

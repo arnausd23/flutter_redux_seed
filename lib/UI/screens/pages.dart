@@ -3,7 +3,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_redux_dev_tools/flutter_redux_dev_tools.dart';
 import 'package:flutter_redux_seed/UI/view_models/item_list_vm.dart';
 import 'package:flutter_redux_seed/UI/widgets/widgets.dart';
-import 'package:flutter_redux_seed/domain/app_state.dart';
+import 'package:flutter_redux_seed/models/app_state.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_dev_tools/redux_dev_tools.dart';
 
