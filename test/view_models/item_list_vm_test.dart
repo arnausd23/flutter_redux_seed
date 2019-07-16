@@ -1,5 +1,5 @@
 import 'package:flutter_redux_seed/UI/view_models/item_list_vm.dart';
-import 'package:flutter_redux_seed/model/app_state.dart';
+import 'package:flutter_redux_seed/domain/app_state.dart';
 import 'package:flutter_redux_seed/redux/reducers/index.dart';
 
 import 'package:flutter_test/flutter_test.dart';

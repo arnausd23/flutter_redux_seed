@@ -1,15 +1,10 @@
 import 'dart:convert';
 
-import 'package:flutter_redux_seed/model/app_state.dart';
+import 'package:flutter_redux_seed/domain/app_state.dart';
+import 'package:flutter_redux_seed/domain/local_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const kItemsKey = 'itemsState';
-
-abstract class LocalRepository {
-  void save(AppState state);
-
-  Future<AppState> load();
-}
 
 class StateRepository implements LocalRepository {
   void save(AppState state) async {
@@ -29,4 +24,3 @@ class StateRepository implements LocalRepository {
     return AppState.initialState();
   }
 }
-

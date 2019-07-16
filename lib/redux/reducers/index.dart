@@ -1,4 +1,4 @@
-import 'package:flutter_redux_seed/model/app_state.dart';
+import 'package:flutter_redux_seed/domain/app_state.dart';
 import 'package:flutter_redux_seed/redux/reducers/item_reducer.dart';
 
 

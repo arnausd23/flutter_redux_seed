@@ -1,4 +1,4 @@
-import 'package:flutter_redux_seed/model/item.dart';
+import 'package:flutter_redux_seed/domain/item.dart';
 
 class AddItemAction {
   static int _id = 0;
