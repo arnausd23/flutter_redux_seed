@@ -13,7 +13,7 @@ main() {
 
       var viewModel = ItemListViewModel.create(store);
       expect(viewModel.items.length, 0);
-      viewModel.onAddItem('asdasdwa');
+      viewModel.onAddItem('test');
       expect(viewModel.items.length, 1);
     });
   });
