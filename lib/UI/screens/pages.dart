@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_redux_dev_tools/flutter_redux_dev_tools.dart';
-import 'package:flutter_redux_seed/UI/view_models/item_list_vm.dart';
+import 'package:flutter_redux_seed/view_models/item_list_vm.dart';
 import 'package:flutter_redux_seed/UI/widgets/widgets.dart';
 import 'package:flutter_redux_seed/models/app_state.dart';
 import 'package:redux/redux.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_redux_seed/UI/view_models/item_list_vm.dart';
+import 'package:flutter_redux_seed/view_models/item_list_vm.dart';
 import 'package:flutter_redux_seed/models/item.dart';
 
 const kDeleteAllButton = 'Delete all items';
