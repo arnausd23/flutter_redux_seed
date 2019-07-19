@@ -23,12 +23,12 @@ class BuildConfig {
 }
 
 class _Config {
-  static const API_URL = "API_URL";
-  static const CURRENT_ENV = "CURRENT_ENV";
+  static const API_URL = "";
+  static const CURRENT_ENV = "";
 
   static Map<String, dynamic> stagingConstants = {
     API_URL: "http://localhost:3000/api",
-    CURRENT_ENV: Environment.QA,
+    CURRENT_ENV: Environment.STAGING,
   };
 
   static Map<String, dynamic> qaConstants = {
