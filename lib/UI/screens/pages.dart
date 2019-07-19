@@ -25,6 +25,7 @@ class MyHomePage extends StatelessWidget {
           builder: (BuildContext context, ItemListViewModel viewModel) => Column(
                 children: <Widget>[
                   AddItemWidget(viewModel),
+                  Text('some test'),
                   Expanded(child: ItemListWidget(viewModel)),
                   RemoveItemsButton(viewModel),
                 ],
