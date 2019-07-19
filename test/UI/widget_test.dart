@@ -14,12 +14,12 @@ void main() {
     expect(find.text('test'), findsOneWidget);
   });
 
-//  testWidgets('Button removes all items', (WidgetTester tester) async {
-//    await tester.pumpWidget(Init());
-//
-//    await tester.tap(find.byType(RaisedButton));
-//    await tester.pump();
-//
-//    expect(find.text('test'), findsNothing);
-//  });
+  testWidgets('Button removes all items', (WidgetTester tester) async {
+    await tester.pumpWidget(Init());
+
+    await tester.tap(find.byType(RaisedButton));
+    await tester.pump();
+
+    expect(find.text('test'), findsNothing);
+  });
 }
