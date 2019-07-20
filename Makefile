@@ -1,3 +1,5 @@
+.PHONY: all test clean
+
 ####################################################
 ###
 ### Generate an apk with different environments
@@ -59,3 +61,12 @@ else ifeq ($(mode)-$(env),RELEASE-STAGING)
 else ifeq ($(mode)-$(env),DEBUG-STAGING)
 	flutter run --debug -t lib/core/main_staging.dart
 endif
+
+####################################################
+###
+### Run tests
+###
+####################################################
+test:
+	flutter test
+
