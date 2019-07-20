@@ -1,4 +1,4 @@
-# flutter_redux_seed
+# Flutter-Redux seed
 
 A Flutter seed: 
 - Redux (flutter_redux)
@@ -26,12 +26,12 @@ A Flutter seed:
 
 Apk generation
 
-    `make generate env=ENVIRONMENT mode=MODE`
+    make generate env=ENVIRONMENT mode=MODE
 
 App run
 
-    `make run env=ENVIRONMENT mode=MODE`
+    make run env=ENVIRONMENT mode=MODE
     
 ## Test run
 
-    `make test`
+    make test
