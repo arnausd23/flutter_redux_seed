@@ -16,17 +16,17 @@ ifndef mode
 endif
 ### Generation
 ifeq ($(mode)-$(env),RELEASE-PROD)
-	flutter build apk --release -t lib/main.dart
+	flutter build apk --release -t lib/core/main.dart
 else ifeq ($(mode)-$(env),DEBUG-PROD)
-	flutter build apk --debug -t lib/main.dart
+	flutter build apk --debug -t lib/core/main.dart
 else ifeq ($(mode)-$(env),RELEASE-QA)
-	flutter build apk --release -t lib/main_qa.dart
+	flutter build apk --release -t lib/core/main_qa.dart
 else ifeq ($(mode)-$(env),DEBUG-QA)
-	flutter build apk --debug -t lib/main.dart
+	flutter build apk --debug -t lib/core/main.dart
 else ifeq ($(mode)-$(env),RELEASE-STAGING)
-	flutter build apk --release -t lib/main_staging.dart
+	flutter build apk --release -t lib/core/main_staging.dart
 else ifeq ($(mode)-$(env),DEBUG-STAGING)
-	flutter build apk --debug -t lib/main_staging.dart
+	flutter build apk --debug -t lib/core/main_staging.dart
 endif
 
 ####################################################
@@ -47,15 +47,15 @@ ifndef mode
 endif
 ### Execution
 ifeq ($(mode)-$(env),RELEASE-PROD)
-	flutter run --release -t lib/main.dart
+	flutter run --release -t lib/core/main.dart
 else ifeq ($(mode)-$(env),DEBUG-PROD)
-	flutter run --debug -t lib/main.dart
+	flutter run --debug -t lib/core/main.dart
 else ifeq ($(mode)-$(env),RELEASE-QA)
-	flutter run --release -t lib/main_qa.dart
+	flutter run --release -t lib/core/main_qa.dart
 else ifeq ($(mode)-$(env),DEBUG-QA)
-	flutter run --debug -t lib/main.dart
+	flutter run --debug -t lib/core/main.dart
 else ifeq ($(mode)-$(env),RELEASE-STAGING)
-	flutter run --release -t lib/main_staging.dart
+	flutter run --release -t lib/core/main_staging.dart
 else ifeq ($(mode)-$(env),DEBUG-STAGING)
-	flutter run --debug -t lib/main_staging.dart
+	flutter run --debug -t lib/core/main_staging.dart
 endif

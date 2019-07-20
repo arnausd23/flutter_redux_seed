@@ -1,4 +1,4 @@
-import 'package:flutter_redux_seed/config.dart';
+import 'package:flutter_redux_seed/core/config.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 main() {
