@@ -24,14 +24,14 @@ A Flutter seed:
 
 ## Makefile usage
 
-Apk generation
+##### Apk generation
 
     make generate env=ENVIRONMENT mode=MODE
 
-App run
+##### App run
 
     make run env=ENVIRONMENT mode=MODE
     
-Test run
+##### Test run
 
     make test
