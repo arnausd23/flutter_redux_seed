@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_redux_seed/UI/init.dart';
+import 'package:flutter_redux_seed/core/init.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
