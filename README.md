@@ -32,6 +32,6 @@ App run
 
     make run env=ENVIRONMENT mode=MODE
     
-## Test run
+Test run
 
     make test
