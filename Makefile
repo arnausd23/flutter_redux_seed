@@ -9,6 +9,17 @@
 ###
 ####################################################
 generate:
+	@sh ./scripts/select.sh
+
+####################################################
+###
+### Process to generate an apk with different environments
+### [PROD, QA, STAGING]
+### and different modes
+### [RELEASE, DEBUG]
+###
+####################################################
+build-apk:
 ### Simple definition check
 ifndef env
 	@echo 'You need to specify "env" variable [PROD, QA, STAGING]'
