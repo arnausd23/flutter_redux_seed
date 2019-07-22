@@ -66,6 +66,7 @@ It will appear 2 select options. First is for environment, second is for mode.
 ## ToDo
 
 - [ ] I18n
+- [ ] Service locator
 
 ## Authors
 
