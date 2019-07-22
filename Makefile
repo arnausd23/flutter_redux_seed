@@ -18,17 +18,26 @@ ifndef mode
 endif
 ### Generation
 ifeq ($(mode)-$(env),RELEASE-PROD)
+	flutter clean
 	flutter build apk --release -t lib/core/main.dart
+	sh ./scripts/renameApk.sh release prod
 else ifeq ($(mode)-$(env),DEBUG-PROD)
 	flutter build apk --debug -t lib/core/main.dart
+	sh ./scripts/renameApk.sh debug prod
 else ifeq ($(mode)-$(env),RELEASE-QA)
+	flutter clean
 	flutter build apk --release -t lib/core/main_qa.dart
+	sh ./scripts/renameApk.sh release qa
 else ifeq ($(mode)-$(env),DEBUG-QA)
-	flutter build apk --debug -t lib/core/main.dart
+	flutter build apk --debug -t lib/core/main_qa.dart
+	sh ./scripts/renameApk.sh debug qa
 else ifeq ($(mode)-$(env),RELEASE-STAGING)
+	flutter clean
 	flutter build apk --release -t lib/core/main_staging.dart
+	sh ./scripts/renameApk.sh release staging
 else ifeq ($(mode)-$(env),DEBUG-STAGING)
 	flutter build apk --debug -t lib/core/main_staging.dart
+	sh ./scripts/renameApk.sh debug staging
 endif
 
 ####################################################
@@ -55,7 +64,7 @@ else ifeq ($(mode)-$(env),DEBUG-PROD)
 else ifeq ($(mode)-$(env),RELEASE-QA)
 	flutter run --release -t lib/core/main_qa.dart
 else ifeq ($(mode)-$(env),DEBUG-QA)
-	flutter run --debug -t lib/core/main.dart
+	flutter run --debug -t lib/core/main_qa.dart
 else ifeq ($(mode)-$(env),RELEASE-STAGING)
 	flutter run --release -t lib/core/main_staging.dart
 else ifeq ($(mode)-$(env),DEBUG-STAGING)

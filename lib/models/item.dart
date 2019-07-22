@@ -19,6 +19,15 @@ class Item {
   Map toJson() => {'id': id, 'body': body, 'completed': completed};
 
   @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+          other is Item &&
+              id == other.id;
+
+  @override
+  int get hashCode => id.hashCode;
+
+  @override
   String toString() {
     return toJson().toString();
   }
