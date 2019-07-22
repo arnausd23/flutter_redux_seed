@@ -24,10 +24,8 @@ run:
 
 ####################################################
 ###
-### Process to generate an apk with different environments
-### [PROD, QA, STAGING]
-### and different modes
-### [RELEASE, DEBUG]
+### Check definition of env and mode
+### Execute proper command
 ###
 ####################################################
 build-apk:
@@ -64,10 +62,8 @@ endif
 
 ####################################################
 ###
-### Run the app with different environments
-### [PROD, QA, STAGING]
-### and different modes
-### [RELEASE, DEBUG]
+### Check definition of env and mode
+### Execute proper command
 ###
 ####################################################
 run-apk:
