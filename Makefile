@@ -9,7 +9,18 @@
 ###
 ####################################################
 generate:
-	@sh ./scripts/select.sh
+	@sh ./scripts/generate.sh
+
+####################################################
+###
+### Run an app with different environments
+### [PROD, QA, STAGING]
+### and different modes
+### [RELEASE, DEBUG]
+###
+####################################################
+run:
+	@sh ./scripts/run.sh
 
 ####################################################
 ###
@@ -30,7 +41,7 @@ endif
 ### Generation
 ifeq ($(mode)-$(env),RELEASE-PROD)
 	flutter clean
-	flutter build apk --release -t lib/core/main.dart
+	flutter build apk --release w lib/core/main.dart
 	sh ./scripts/renameApk.sh release prod
 else ifeq ($(mode)-$(env),DEBUG-PROD)
 	flutter build apk --debug -t lib/core/main.dart
@@ -59,7 +70,7 @@ endif
 ### [RELEASE, DEBUG]
 ###
 ####################################################
-run:
+run-apk:
 ### Simple definition check
 ifndef env
 	@echo 'You need to specify "env" variable [PROD, QA, STAGING]'

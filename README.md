@@ -26,11 +26,11 @@ A Flutter seed:
 
 ##### Apk generation
 
-    make generate env=ENVIRONMENT mode=MODE
+    make generate
 
 ##### App run
 
-    make run env=ENVIRONMENT mode=MODE
+    make run
     
 ##### Test run
 
