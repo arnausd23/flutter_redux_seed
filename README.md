@@ -66,7 +66,17 @@ It will appear 2 select options. First is for environment, second is for mode.
 ## ToDo
 
 - [ ] I18n
+- [ ] Redux Devtools
 - [ ] Service locator
+- [ ] Theming
+- [ ] Http gateway (dio)
+- [ ] Versioning
+- [ ] Isolate example
+- [ ] Device info
+- [ ] Alert/Toast
+- [ ] Fonts
+- [ ] Image/assets example
+- [ ] Library example
 
 ## Authors
 
